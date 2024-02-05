@@ -958,13 +958,6 @@ public class PlayerController : MonoBehaviour
         isPowerJump = false;
     }
 
-    IEnumerator Attacking()
-    {
-        isAttacking = true;
-        yield return new WaitForSeconds(profile.attackCooldown);
-        isAttacking = false;
-    }
-
     IEnumerator Dash()
     {
         onStartDash?.Invoke(this, EventArgs.Empty);
