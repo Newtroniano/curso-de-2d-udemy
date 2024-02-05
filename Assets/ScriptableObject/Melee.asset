@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab0fe361a80e7349886df2672f479a6, type: 3}
+  m_Name: Melee
+  m_EditorClassIdentifier: 
+  walkSpeed: 10
+  accelerationSpeed: 0.3
+  decelaraionSpeed: 2.62
+  creepSpeed: 5
+  gravity: 30
+  jumpSpeed: 10
+  doubleJumpSpeed: 10
+  xWallJumpSpeed: 15
+  yWallJumpSpeed: 15
+  wallRunAmount: 8
+  wallSlidAmount: 0.1
+  glideTime: 2
+  glideDescentAmount: 2
+  powerJumpSpeed: 40
+  powerJumpWaitTime: 1.5
+  dashSpeed: 20
+  dashTime: 0.2
+  dashCooldownTime: 1
+  groundSlamSpeed: 60
+  deadZoneValue: 0.15
+  swimSpeed: 150
+  wallJumpDelay: 0.4
+  coyoteTime: 0.2
+  jumpBufferTime: 0.2
+  attackCooldown: 0.8
+  canDoubleJump: 1
+  canTripleJump: 1
+  canWallJump: 1
+  canJumpAfeterWallJump: 1
+  canWallRun: 1
+  canMultipliWallRun: 1
+  canWallSlide: 1
+  canGlide: 1
+  canGlideAfeterWallContact: 1
+  canPowerJump: 1
+  canGroundDash: 1
+  canAirDash: 1
+  canGrundSlam: 1
+  canSwim: 1
+  canMelee: 1
