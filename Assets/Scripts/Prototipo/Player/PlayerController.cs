@@ -12,8 +12,10 @@ public class PlayerController : MonoBehaviour
 
     #region public properties
     public PlayerProfile profile;
-    public PlayerAnimatorController profile_animator;
     public static PlayerController Instance;
+    public BulletController shot;
+    public Transform shotPoint;
+    
 
 
 
@@ -62,7 +64,7 @@ public class PlayerController : MonoBehaviour
     private bool _holdJump;
 
 
-
+    private bool holdBotton;
     private Vector2 _input;
     public Vector2 _moveDirection;
     private int direction;
@@ -896,6 +898,35 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+
+
+    void OnShot(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            holdBotton = true;
+
+
+            //Instantiate(shot, shotPoint.position, shotPoint.rotation).moveDir = new Vector2(playerController.Direction, 0f);
+            GameObject bullet = ObjectPool.instance.GetNormalShootPool();
+            if (bullet != null)
+            {
+                //bullet.GetComponent<BulletController>().profile.moveDir = new Vector2(playerController.Direction, 0f);
+
+                bullet.transform.position = shotPoint.position;
+                bullet.transform.rotation = shotPoint.rotation;
+
+                bullet.SetActive(true);
+            }
+        }
+        else if (context.canceled)
+        {
+            holdBotton = false;
+        }
+
+
+    }
+
 
 
     public void InputManger()
